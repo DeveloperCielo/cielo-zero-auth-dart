@@ -1,3 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'zero_auth_request.g.dart';
+
+@JsonSerializable(nullable: false, createToJson: true, createFactory: false)
 class ZeroAuthRequest {
   ZeroAuthRequest({
     this.cardToken,
@@ -21,18 +26,10 @@ class ZeroAuthRequest {
   String brand;
   CardOnFile cardOnFile;
 
-  Map<String, dynamic> toJson() => {
-    "CardType": cardType.toString().split('.').last,
-    "CardNumber": cardNumber,
-    "Holder": holder,
-    "ExpirationDate": expirationDate,
-    "SecurityCode": securityCode,
-    "SaveCard": saveCard.toString(),
-    "Brand": brand,
-    "CardOnFile": cardOnFile.toJson(),
-  };
+  Map<String, dynamic> toJson() => _$ZeroAuthRequestToJson(this);
 }
 
+@JsonSerializable(nullable: false, createToJson: true, createFactory: false)
 class CardOnFile {
   CardOnFile({
     this.usage,
@@ -42,15 +39,7 @@ class CardOnFile {
   Usage usage;
   Reason reason;
 
-  factory CardOnFile.fromJson(Map<String, dynamic> json) => CardOnFile(
-    usage: json["Usage"],
-    reason: json["Reason"],
-  );
-
-  Map<String, dynamic> toJson() => {
-    "Usage": usage.toString().split('.').last,
-    "Reason": reason.toString().split('.').last,
-  };
+  Map<String, dynamic> toJson() => _$CardOnFileToJson(this);
 }
 
 enum CardType { CreditCard, DebitCard }
