@@ -6,7 +6,7 @@ class ZeroAuthErrorResponse {
 
   factory ZeroAuthErrorResponse.fromJson(Map<String, dynamic> json) =>
       ZeroAuthErrorResponse(
-        code: json["Code"],
+        code: json["Code"].toString(),
         message: json["Message"],
       );
 }
