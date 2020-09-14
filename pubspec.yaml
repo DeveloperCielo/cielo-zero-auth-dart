@@ -19,7 +19,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-dependency_overrides:
-  analyzer: '0.39.14'
-
 flutter:
