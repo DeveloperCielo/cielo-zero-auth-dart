@@ -1,6 +1,6 @@
 name: cielo_zero_auth
 description: A Flutter package that helps to use Cielo's Zero Auth.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/developercielo/cielo-zero-auth-dart
 
 environment:
@@ -18,5 +18,8 @@ dev_dependencies:
   json_serializable: ^3.3.0
   flutter_test:
     sdk: flutter
+
+dependency_overrides:
+  analyzer: '0.39.14'
 
 flutter:

@@ -1,6 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:cielo_zero_auth/cielo_zero_auth.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final String clientId = "YOUR-CLIENT-ID";
