@@ -45,14 +45,14 @@ class CieloZeroAuth {
     final Uri url = Uri.https(this._url, "/1/zeroauth");
 
     final String sdkName = "CieloZeroAuth";
-    final String sdkVersion = "1.0.3";
+    final String sdkVersion = "1.0.4";
 
     http.Response response = await http.post(
       url,
       headers: <String, String>{
         'Authorization': 'Bearer $token',
         'MerchantId': this.merchantId,
-        'x-sdk-version': '$sdkName\_dart@$sdkVersion',
+        'x-sdk-version': '$sdkName-Dart@$sdkVersion',
         'Content-Type': 'application/json'
       },
       body: jsonEncode(request),

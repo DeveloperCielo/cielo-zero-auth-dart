@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Header adjustment
+
 ## 1.0.3
 
 * Code improvements
