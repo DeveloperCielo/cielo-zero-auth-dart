@@ -44,8 +44,8 @@ class CieloZeroAuth {
     final token = accessTokenResult.accessTokenResponse?.accessToken;
     final Uri url = Uri.https(this._url, "/1/zeroauth");
 
-    final String sdkName = "cielo_zero_auth";
-    final String sdkVersion = "1.0.2";
+    final String sdkName = "CieloZeroAuth";
+    final String sdkVersion = "1.0.3";
 
     http.Response response = await http.post(
       url,
